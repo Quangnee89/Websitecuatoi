@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làm thế nào công nghệ thay đổi cuộc sống chúng ta - Blog Cá Nhân</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter text-slate-800 bg-white dark:text-slate-200 dark:bg-slate-900 transition-colors duration-300">
+    <!-- Header -->
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="flex justify-between items-center py-4">
+                <div class="logo">
+                    <h1 class="text-2xl font-bold"><a href="index.html" class="text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">MyBlog</a></h1>
+                </div>
+                <nav class="nav hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium px-4 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">Trang Chủ</a></li>
+                        <li><a href="about.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium px-4 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">Về Tôi</a></li>
+                        <li><a href="contact.html" class="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium px-4 py-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">Liên Hệ</a></li>
+                    </ul>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors">
+                        <i class="fas fa-moon text-slate-600 dark:text-slate-300"></i>
+                    </button>
+                    <div class="hamburger md:hidden flex flex-col space-y-1 cursor-pointer">
+                        <span class="w-6 h-0.5 bg-slate-800 dark:bg-slate-200 transition-all"></span>
+                        <span class="w-6 h-0.5 bg-slate-800 dark:bg-slate-200 transition-all"></span>
+                        <span class="w-6 h-0.5 bg-slate-800 dark:bg-slate-200 transition-all"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Hero -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-800 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto px-5">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-2 text-sm text-slate-500 dark:text-slate-400 mb-6">
+                    <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Trang chủ</a>
+                    <span>/</span>
+                    <a href="#" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Công nghệ</a>
+                    <span>/</span>
+                    <span>Bài viết</span>
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold mb-6 text-slate-800 dark:text-slate-200">
+                    Làm thế nào công nghệ thay đổi cuộc sống chúng ta
+                </h1>
+                <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="Tác giả" class="w-12 h-12 rounded-full">
+                        <div class="text-left">
+                            <div class="font-medium text-slate-800 dark:text-slate-200">Minh</div>
+                            <div class="text-sm text-slate-500 dark:text-slate-400">25 Tháng 7, 2024</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-6 text-sm text-slate-500 dark:text-slate-400">
+                        <span class="flex items-center space-x-1">
+                            <i class="fas fa-clock"></i>
+                            <span>8 phút đọc</span>
+                        </span>
+                        <span class="flex items-center space-x-1">
+                            <i class="fas fa-eye"></i>
+                            <span>1,234 lượt xem</span>
+                        </span>
+                        <span class="flex items-center space-x-1">
+                            <i class="fas fa-comment"></i>
+                            <span>12 bình luận</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Content -->
+    <section class="py-20 bg-white dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid lg:grid-cols-4 gap-12">
+                <main class="lg:col-span-3">
+                    <article class="post-article">
+                        <div class="post-image">
+                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=400&fit=crop&crop=center" alt="Công nghệ và cuộc sống">
+                        </div>
+
+                        <div class="post-body">
+                            <p class="lead">
+                                Trong thời đại số hóa ngày nay, công nghệ đã và đang thay đổi mọi khía cạnh của cuộc sống chúng ta một cách sâu sắc và toàn diện. Từ cách chúng ta giao tiếp, làm việc, học tập đến giải trí, công nghệ đã mở ra những khả năng mới mà thế hệ trước chưa từng tưởng tượng được.
+                            </p>
+
+                            <h2>Cách công nghệ thay đổi giao tiếp</h2>
+                            <p>
+                                Một trong những thay đổi rõ rệt nhất mà công nghệ mang lại là cách chúng ta giao tiếp với nhau. Trước đây, việc liên lạc với người thân ở xa phải qua thư từ hoặc điện thoại cố định. Ngày nay, chỉ với một chiếc smartphone, chúng ta có thể:
+                            </p>
+
+                            <ul>
+                                <li>Gọi video với bất kỳ ai trên thế giới</li>
+                                <li>Chia sẻ hình ảnh, video ngay lập tức</li>
+                                <li>Tham gia các cuộc họp trực tuyến từ mọi nơi</li>
+                                <li>Kết nối với cộng đồng có cùng sở thích</li>
+                            </ul>
+
+                            <blockquote>
+                                "Công nghệ đã làm cho thế giới trở nên nhỏ hơn, nhưng cũng đã làm cho các mối quan hệ trở nên phong phú hơn."
+                            </blockquote>
+
+                            <h2>Thay đổi trong cách làm việc</h2>
+                            <p>
+                                Đại dịch COVID-19 đã chứng minh rằng công nghệ có thể thay đổi hoàn toàn cách chúng ta làm việc. Remote work không còn là một khái niệm xa lạ mà đã trở thành xu hướng chính của nhiều công ty.
+                            </p>
+
+                            <p>
+                                Các công cụ như Zoom, Slack, Microsoft Teams đã cho phép chúng ta:
+                            </p>
+
+                            <ol>
+                                <li>Làm việc từ bất kỳ đâu có internet</li>
+                                <li>Cộng tác hiệu quả với đồng nghiệp trên toàn cầu</li>
+                                <li>Tham gia họp, thuyết trình trực tuyến</li>
+                                <li>Quản lý dự án một cách linh hoạt</li>
+                            </ol>
+
+                            <h2>Giáo dục trong kỷ nguyên số</h2>
+                            <p>
+                                Công nghệ đã cách mạng hóa ngành giáo dục. E-learning, MOOC (Massive Open Online Courses), và các ứng dụng học tập đã làm cho kiến thức trở nên dễ tiếp cận hơn bao giờ hết.
+                            </p>
+
+                            <p>
+                                Học sinh và sinh viên ngày nay có thể:
+                            </p>
+
+                            <ul>
+                                <li>Học từ các giảng viên hàng đầu thế giới</li>
+                                <li>Truy cập vào thư viện kiến thức khổng lồ trên internet</li>
+                                <li>Sử dụng AR/VR để trải nghiệm học tập sinh động</li>
+                                <li>Học tập theo tốc độ của riêng mình</li>
+                            </ul>
+
+                            <h2>Những thách thức và cân nhắc</h2>
+                            <p>
+                                Tuy nhiên, bên cạnh những lợi ích to lớn, công nghệ cũng mang đến những thách thức mà chúng ta cần lưu ý:
+                            </p>
+
+                            <h3>1. Vấn đề bảo mật và riêng tư</h3>
+                            <p>
+                                Với việc chia sẻ nhiều thông tin cá nhân trên các nền tảng số, vấn đề bảo mật dữ liệu trở nên quan trọng hơn bao giờ hết.
+                            </p>
+
+                            <h3>2. Nghiện công nghệ</h3>
+                            <p>
+                                Việc sử dụng quá nhiều thiết bị điện tử có thể dẫn đến các vấn đề về sức khỏe thể chất và tinh thần.
+                            </p>
+
+                            <h3>3. Khoảng cách số</h3>
+                            <p>
+                                Không phải ai cũng có điều kiện tiếp cận với công nghệ mới nhất, tạo ra sự bất bình đẳng trong xã hội.
+                            </p>
+
+                            <h2>Tương lai và kết luận</h2>
+                            <p>
+                                Công nghệ sẽ tiếp tục phát triển với tốc độ chóng mặt. AI, IoT, blockchain, và các công nghệ mới khác sẽ mang đến những thay đổi còn lớn hơn nữa.
+                            </p>
+
+                            <p>
+                                Để tận dụng tối đa những lợi ích mà công nghệ mang lại, chúng ta cần:
+                            </p>
+
+                            <ul>
+                                <li>Luôn cập nhật và học hỏi những công nghệ mới</li>
+                                <li>Sử dụng công nghệ một cách có trách nhiệm</li>
+                                <li>Cân bằng giữa cuộc sống số và cuộc sống thực</li>
+                                <li>Giúp đỡ những người xung quanh tiếp cận với công nghệ</li>
+                            </ul>
+
+                            <p>
+                                Cuối cùng, công nghệ chỉ là công cụ. Điều quan trọng là cách chúng ta sử dụng nó để tạo ra giá trị tích cực cho bản thân và xã hội.
+                            </p>
+                        </div>
+
+                        <div class="post-tags">
+                            <h4>Thẻ:</h4>
+                            <a href="#" class="tag">Công nghệ</a>
+                            <a href="#" class="tag">Cuộc sống</a>
+                            <a href="#" class="tag">Tương lai</a>
+                            <a href="#" class="tag">Digital</a>
+                        </div>
+
+                        <div class="post-sharing">
+                            <h4>Chia sẻ bài viết:</h4>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook">
+                                    <i class="fab fa-facebook"></i> Facebook
+                                </a>
+                                <a href="#" class="share-btn twitter">
+                                    <i class="fab fa-twitter"></i> Twitter
+                                </a>
+                                <a href="#" class="share-btn linkedin">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="#" class="share-btn copy">
+                                    <i class="fas fa-link"></i> Copy Link
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Comments Section -->
+                    <section class="comments-section">
+                        <h3>Bình luận (12)</h3>
+                        
+                        <div class="comment">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612d75c?w=50&h=50&fit=crop&crop=face" alt="User">
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <h4>Lan Anh</h4>
+                                    <span class="comment-date">2 ngày trước</span>
+                                </div>
+                                <p>Bài viết rất hay và có ý nghĩa! Mình đặc biệt thích phần nói về giáo dục. Thực sự công nghệ đã thay đổi cách chúng ta học tập rất nhiều.</p>
+                                <div class="comment-actions">
+                                    <button class="like-btn"><i class="fas fa-thumbs-up"></i> 5</button>
+                                    <button class="reply-btn">Trả lời</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comment">
+                            <div class="comment-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="User">
+                            </div>
+                            <div class="comment-content">
+                                <div class="comment-header">
+                                    <h4>Hoàng Nam</h4>
+                                    <span class="comment-date">1 ngày trước</span>
+                                </div>
+                                <p>Cảm ơn tác giả đã chia sẻ! Mình cũng đang quan tâm về vấn đề bảo mật dữ liệu mà bài viết đề cập. Có thể viết thêm về chủ đề này không?</p>
+                                <div class="comment-actions">
+                                    <button class="like-btn"><i class="fas fa-thumbs-up"></i> 3</button>
+                                    <button class="reply-btn">Trả lời</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="comment-form">
+                            <h4>Để lại bình luận</h4>
+                            <div class="form-row">
+                                <input type="text" placeholder="Tên của bạn" required>
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <textarea placeholder="Viết bình luận của bạn..." rows="4" required></textarea>
+                            <button type="submit" class="btn-primary">Gửi bình luận</button>
+                        </form>
+                    </section>
+                </main>
+
+                <aside class="sidebar">
+                    <div class="widget author-widget">
+                        <div class="author-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Tác giả" class="author-avatar">
+                            <h3>Minh</h3>
+                            <p>Developer & Blogger</p>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                            <a href="about.html" class="btn-outline">Xem thêm</a>
+                        </div>
+                    </div>
+
+                    <div class="widget related-posts">
+                        <h3>Bài viết liên quan</h3>
+                        <div class="related-post">
+                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=80&h=80&fit=crop&crop=center" alt="AI">
+                            <div class="related-content">
+                                <h4><a href="#">Trí tuệ nhân tạo và tương lai nghề nghiệp</a></h4>
+                                <span class="date">20 Tháng 7, 2025</span>
+                            </div>
+                        </div>
+                        <div class="related-post">
+                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=80&h=80&fit=crop&crop=center" alt="Remote work">
+                            <div class="related-content">
+                                <h4><a href="#">Làm việc từ xa: Ưu và nhược điểm</a></h4>
+                                <span class="date">15 Tháng 7, 2025</span>
+                            </div>
+                        </div>
+                        <div class="related-post">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=80&h=80&fit=crop&crop=center" alt="Digital">
+                            <div class="related-content">
+                                <h4><a href="#">Chuyển đổi số trong doanh nghiệp</a></h4>
+                                <span class="date">10 Tháng 7, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="widget newsletter-widget">
+                        <h3>Đăng ký nhận tin</h3>
+                        <p>Nhận thông báo về bài viết mới</p>
+                        <form>
+                            <input type="email" placeholder="Email của bạn">
+                            <button type="submit" class="btn-primary">Đăng ký</button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 dark:bg-slate-900 text-white py-12 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-5">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">MyBlog</h3>
+                    <p class="text-slate-300 dark:text-slate-400 mb-4">Chia sẻ những câu chuyện và kinh nghiệm sống</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Danh mục</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Công nghệ</a></li>
+                        <li><a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Du lịch</a></li>
+                        <li><a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Phát triển bản thân</a></li>
+                        <li><a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Sách</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liên kết</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Về tôi</a></li>
+                        <li><a href="contact.html" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Liên hệ</a></li>
+                        <li><a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="text-slate-300 hover:text-white dark:text-slate-400 dark:hover:text-slate-200 transition-colors">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 dark:border-slate-600 mt-8 pt-8 text-center">
+                <p class="text-slate-400 dark:text-slate-500">&copy; 2024 MyBlog. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+                <div class="footer-section">
+                    <h4>Liên hệ</h4>
+                    <p><i class="fas fa-envelope"></i> contact@myblog.com</p>
+                    <p><i class="fas fa-phone"></i> +84 123 456 789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hà Nội, Việt Nam</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MyBlog. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
