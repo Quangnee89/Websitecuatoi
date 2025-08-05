@@ -235,4 +235,3 @@ Nếu bạn gặp vấn đề hoặc có câu hỏi, hãy tạo issue trên GitH
 
 ---
 
-**Chúc bạn có một website blog tuyệt vời! 🎉**
